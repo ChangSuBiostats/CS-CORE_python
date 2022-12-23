@@ -9,8 +9,9 @@ setup(
     license='LICENSE',
     packages=['CSCORE'],
     description='A Python package for cell-type-specific co-expression inference from single cell RNA-sequencing data',
+    python_requires=">3",
     install_requires=[
-        #'python>=3.6.0',
-        #'numpy'
+        'numpy',
+        "scipy"
     ]
 )
