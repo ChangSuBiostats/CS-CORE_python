@@ -37,7 +37,8 @@ def CSCORE_IRLS(X, seq_depth, post_process=True):
         sigma2 = np.dot(seq_depth_sq, (np.power(X_centered, 2) - M) / h) / np.dot(np.power(seq_depth_sq, 2), 1 / h)
         theta = np.power(mu, 2) / sigma2
         j = j + 1
-        delta = np.max(np.abs(np.log((theta / theta_previous)[np.logical_and(theta_previous > 0, theta > 0)])))
+        theta_subset = np.logical_and(theta_previous > 0, theta > 0)
+        delta = np.max(np.abs(np.log(theta[theta_subset]) - np.log(theta_previous[theta_subset])))
 
     if j == 10 and delta > 0.05:
         print('IRLS failed to converge after 10 iterations. Please check your data.')

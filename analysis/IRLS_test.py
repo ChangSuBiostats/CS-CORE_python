@@ -4,7 +4,8 @@ Test the Python implementation of CS-CORE IRLS
 ==========
 '''
 import numpy as np
-from CSCORE import *
+import time
+from CSCORE.CSCORE_IRLS import CSCORE_IRLS
 
 # Test 1: a pair of independent data
 # use ind_gene_pair from the R CS-CORE package
@@ -21,15 +22,15 @@ print(CSCORE_IRLS(counts, seq_depth))
 # saved by
 # ```{r}
 # write.csv(pbmc_B_healthy$nCount_RNA,
-#           '/Users/chang/Documents/research/CSNet-sc/R_package/data/pbmc_seq_depth.csv')
+#           'data/pbmc_seq_depth.csv')
 # pbmc_counts <- GetAssayData(pbmc_B_healthy, slot = 'counts') %>% as.matrix %>% t
 # write.csv(pbmc_counts[, genes_selected],
-#             '/Users/chang/Documents/research/CSNet-sc/R_package/data/pbmc_counts.csv')
+#             'data/pbmc_counts.csv')
 # ```
 
 counts = np.genfromtxt('data/pbmc_counts.csv',
                        delimiter=',', skip_header=1)[:, 1:]
-seq_depth = np.genfromtxt('/Users/chang/Documents/research/CSNet-sc/R_package/data/pbmc_seq_depth.csv',
+seq_depth = np.genfromtxt('data/pbmc_seq_depth.csv',
                        delimiter=',', skip_header=1)[:, 1]
 
 B_cell_result = CSCORE_IRLS(counts, seq_depth)
