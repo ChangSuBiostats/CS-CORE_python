@@ -4,7 +4,7 @@ setup(
     name='CSCORE',
     version='0.0.1',
     author='Chang Su',
-    author_email='c.su@yale.edu',
+    author_email='chang.su@emory.edu',
     url='https://github.com/ChangSuBiostats/CS-CORE_python',
     license='LICENSE',
     packages=['CSCORE'],
