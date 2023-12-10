@@ -12,7 +12,7 @@ setup(
     python_requires=">3",
     install_requires=[
         'numpy',
-        "scipy"
+        "scipy",
         "scanpy"
     ]
 )
