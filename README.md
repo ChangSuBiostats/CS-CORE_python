@@ -7,13 +7,13 @@ Python package for `CS-CORE`, a statistical method for cell-type-specific co-exp
 pip install git+https://github.com/ChangSuBiostats/CS-CORE_python.git
 ```
 
-## Vignettes
-Coming soon!
+## Vignette
+We provide a vignette on running CS-CORE with AnnData object in Python in this [notebook](https://github.com/ChangSuBiostats/CS-CORE_python/blob/master/analysis/CSCORE_python_example.ipynb).
+
+We also provide a demo on CS-CORE's time and memory usage in two typical scenarios in this [notebook](https://github.com/ChangSuBiostats/CS-CORE_python/blob/master/analysis/time_and_memory_usage.ipynb).
 
 ## Contact us 
-Feel free to contact Chang Su at <c.su@yale.edu> for questions on applying CS-CORE to your own singe cell data. 
+Chang Su at <chang.su@emory.edu>
 
 ## Reference
-**Cell-type-specific co-expression inference from single cell RNA-sequencing data.**
-Chang Su, Zichun Xu, Xinning Shan, Biao Cai, Hongyu Zhao, Jingfei Zhang.
-bioRxiv 2022.12.13.520181; doi: https://doi.org/10.1101/2022.12.13.520181
+Su, C., Xu, Z., Shan, X. et al. Cell-type-specific co-expression inference from single cell RNA-sequencing data. Nat Commun 14, 4846 (2023). https://doi.org/10.1038/s41467-023-40503-7
